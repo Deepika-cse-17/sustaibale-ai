@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SustainAI Women Wellbeing</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>SustainAI – Women Wellbeing Analysis</h1>
+
+    <form method="POST">
+        <label>Sleep Duration (hours)</label>
+        <input type="number" step="0.1" name="sleep" required>
+
+        <label>Screen Time (hours)</label>
+        <input type="number" step="0.1" name="screen" required>
+
+        <label>Exercise (minutes)</label>
+        <input type="number" name="exercise" required>
+
+        <label>Stress Level (1–10)</label>
+        <input type="number" min="1" max="10" name="stress" required>
+
+        <label>Food Quality (1–10)</label>
+        <input type="number" min="1" max="10" name="food" required>
+
+        <button type="submit">Analyze Wellbeing</button>
+    </form>
+
+    {% if result %}
+        <div class="result">
+            <h2>{{ result }}</h2>
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
